@@ -69,3 +69,10 @@ $(document).ready(function() {
     ScrollReveal().reveal('.dish', { origin: 'left', duration: 2000, distance: '20%' });
     ScrollReveal().reveal('#testimonials_content', { origin: 'left', duration: 1000, distance: '20%' });
 });
+
+// Adicionar ao final de script.js
+
+$('#portfolio-btn-desktop, #portfolio-btn-mobile').on('click', function() {
+    // Substitua pelo link real do seu portfólio
+    window.open('https://gabrielvvn.pythonanywhere.com/', '_blank');
+});
