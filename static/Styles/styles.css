@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('header.css');
+@import url('home.css');
+@import url('menu.css');
+@import url('testimonials.css');
+@import url('footer.css');
+
+:root {
+    --color-primary-1: #ffffff;
+    --color-primary-2: #a8a8a8;
+    --color-primary-3: #787878;
+    --color-primary-4: #737373;
+    --color-primary-5: #5e5e5e;
+    --color-primary-6: #000000;
+    --color-primary-7: #000000;
+
+    --color-neutral-0: #fff;
+    --color-neutral-1: black;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-primary-1);
+}
+
+section {
+    padding: 28px 8%;
+}
+
+.btn-default {
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-primary-5);
+    border-radius: 12px;
+    padding: 14px 20px; /* aumentei verticalmente */
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1; /* ajuda a centralizar */
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--color-neutral-0);
+    transition: background-color .3s ease, transform 0.2s ease;
+}
+
+.btn-default:hover {
+    background-color: var(--color-primary-3);
+    transform: scale(1.03);
+}
+
+
+.social-media-buttons {
+    display: flex;
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Centraliza os itens verticalmente */
+    gap: 18px;
+}
+
+.social-media-buttons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 40px;
+    background-color: var(--color-neutral-0);
+    font-size: 1.25rem;
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--color-neutral-1);
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow .3s ease;
+}
+
+.social-media-buttons a:hover {
+    box-shadow: 0px 0px 12px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.section-title {
+    color: var(--color-primary-6);
+    font-size: 1.563rem;
+}
+
+.section-subtitle {
+    font-size: 2.1875rem;
+} 
+
+
+
+
+.btn-default {
+    text-decoration: none; /* Remove sublinhação */
+    color: inherit;       /* Herda a cor do texto pai */
+    /*display: inline-block; /* Permite aplicar estilos de botão */
+}
+
+
+/* ====================================================== */
+/* CÓDIGO DE RESPONSIVIDADE PARA O SITE          */
+/* Adicione este bloco inteiro no FINAL do seu styles.css */
+/* ====================================================== */
+
+/* Estilos para Tablets e telas menores */
+@media screen and (max-width: 1024px) {
+    /* Ajusta o espaçamento geral das seções */
+    section {
+        padding: 28px 4%;
+    }
+
+    /* Ajustes na seção de operações */
+    #dishes {
+        /* Permite que os itens quebrem para a linha de baixo */
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .dish {
+        /* Cada item ocupa quase metade da tela, criando 2 colunas */
+        width: calc(50% - 12px);
+    }
+}
+
+
+/* Estilos para Celulares */
+@media screen and (max-width: 768px) {
+    /* --- Responsividade para a Seção Home (#cta) --- */
+
+    #cta .title {
+        /* Diminui a fonte do título principal */
+        font-size: 2.2rem;
+        text-align: center;
+    }
+
+    #cta .description {
+        /* Diminui a fonte da descrição */
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    #cta_buttons {
+        /* Empilha os botões um sobre o outro */
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+
+    #phone_button {
+        justify-content: center;
+        width: 100%;
+    }
+
+
+    /* --- Responsividade para a Seção Operações (#menu) --- */
+
+    .dish {
+        /* Cada item ocupa 100% da largura, criando 1 coluna */
+        width: 100%;
+    }
+
+    .section-title,
+    .section-subtitle {
+        /* Garante que os títulos da seção estejam centralizados */
+        text-align: center;
+    }
+
+
+    /* --- Responsividade para a Seção Classificações (#testimonials) --- */
+
+    #testimonials_content {
+        text-align: center;
+    }
+
+
+    /* --- Responsividade para o Rodapé (Footer) --- */
+
+    #footer_items {
+        /* Empilha o copyright e os ícones sociais */
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+
+/* Ajustes ainda menores, para celulares com telas pequenas */
+@media screen and (max-width: 480px) {
+    #cta .title {
+        font-size: 1.8rem;
+    }
+
+    #cta .description {
+        font-size: 0.9rem;
+    }
+
+    .dish {
+        padding: 15px; /* Menos espaçamento interno nos cards */
+    }
+}
+
+/* ====================================================== */
+/* NOVOS AJUSTES FINOS PARA O MENU RESPONSIVO             */
+/* Cole este bloco no final do seu arquivo styles.css     */
+/* ====================================================== */
+
+@media screen and (max-width: 768px) {
+
+    /* --- Problema 1: Esconder o logo em texto no celular --- */
+    /* Isso evita que o nome do site "brigue" com os títulos da página. */
+    #nav_logo {
+        display: none;
+    }
+
+
+    /* --- Problema 2: Dar um fundo sólido ao menu mobile aberto --- */
+    /* Isso evita que os links do menu fiquem "embolados" com o texto do site. */
+    #mobile_menu {
+        position: absolute;
+        top: 100%; /* Posiciona o menu logo abaixo do header */
+        left: 0;
+        width: 100%;
+
+        /* A adição mais importante: uma cor de fundo sólida */
+        background-color: var(--color-primary-1); /* Usando a cor de fundo principal do seu site */
+
+        /* Uma sombra para dar a impressão de que ele está "flutuando" sobre o conteúdo */
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+
+        /* Um espaçamento interno para os itens não ficarem colados nas bordas */
+        padding: 20px 0;
+    }
+}
+
+/* ====================================================== */
+/* AJUSTE FINAL DE ESTILO PARA O MENU MOBILE              */
+/* Cole este bloco no final do seu arquivo styles.css     */
+/* ====================================================== */
+
+/* Quando o header estiver com scroll OU com o menu mobile aberto,
+   ele ganhará um fundo sólido e uma sombra. */
+header.scrolled,
+header.menu-open {
+    background-color: var(--color-primary-1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 768px) {
+    #mobile_menu.active {
+        /* Garante que o menu aberto seja um container flex para alinhar os itens */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px; /* Adiciona um espaço entre a lista de links e o botão */
+    }
+
+    #mobile_menu {
+        /* Removemos a sombra própria do menu, pois agora o header tem a sombra */
+        box-shadow: none;
+
+        /* Ajustamos o padding para um visual mais agradável */
+        padding: 24px 8%;
+    }
+
+    /* Removemos a margem padrão da lista de links para um melhor alinhamento */
+    #mobile_nav_list {
+        margin: 0;
+    }
+}
+/* ====================================================== */
+/* CORREÇÃO DO DELAY DO MENU MOBILE                       */
+/* Cole este bloco no final do seu arquivo styles.css     */
+/* ====================================================== */
+
+/* Remove a animação de transição SOMENTE quando o menu é aberto,
+   fazendo o fundo do header aparecer instantaneamente. */
+header.menu-open {
+    transition-duration: 0s;
+}
+
+/* ====================================================== */
+/* AJUSTE FINAL: NOME DO SITE NA HOME (MOBILE)            */
+/* Cole este bloco no final do seu arquivo styles.css     */
+/* ====================================================== */
+
+/* Por padrão, o nome do site na home fica escondido no computador. */
+.site-brand-mobile {
+    display: none;
+}
+
+
+@media screen and (max-width: 768px) {
+    /* Ajustamos a primeira seção para ter mais espaço no topo.
+       Isso empurra o conteúdo para baixo, evitando que o header fixo
+       fique em cima do novo título. */
+    #home {
+        padding-top: 120px;
+    }
+
+    /* Agora, tornamos o nome do site visível e o estilizamos. */
+    .site-brand-mobile {
+        display: block; /* Fica visível */
+        text-align: center; /* Garante a centralização */
+        font-size: 24px; /* Mesmo tamanho do logo no header */
+        font-weight: 600; /* Um pouco de destaque */
+        color: var(--color-primary-6); /* Mesma cor do logo */
+        margin-bottom: 24px; /* Cria um espaço antes do título principal abaixo */
+    }
+}

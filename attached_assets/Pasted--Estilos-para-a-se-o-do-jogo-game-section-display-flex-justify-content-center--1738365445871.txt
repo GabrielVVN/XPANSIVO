@@ -1,0 +1,88 @@
+/* Estilos para a seção do jogo */
+#game-section {
+    display: flex;
+    justify-content: center; /* Centraliza o container do jogo */
+    padding: 20px; /* Espaçamento interno da seção */
+    background-color: var(--color-neutral-0); /* Cor de fundo neutra */
+}
+
+/* Estilos específicos para o game-container */
+#game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os itens dentro do container */
+    justify-content: center;
+    background-color: var(--color-primary-1); /* Usando a cor primária */
+    border: 2px solid var(--color-primary-5); /* Borda com cor primária 5 */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 20px; /* Espaçamento interno */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    margin-bottom: 40px; /* Espaço abaixo do game-container */
+    width: 600px; /* Largura fixa */
+    height: 400px; /* Altura fixa */
+}
+
+/* Estilos para o container de operações e input */
+#operacao-container {
+    display: flex; /* Flexbox para alinhar operações e input */
+    align-items: center; /* Alinha verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    margin: 20px 0; /* Margem acima e abaixo */
+    
+}
+
+#resposta {
+    padding: 5px; /* Reduz o espaçamento interno */
+    width: 37px; /* Largura reduzida para o input */
+    border: 2px solid var(--color-primary-5); /* Borda azul */
+    border-radius: 5px; /* Bordas arredondadas */
+    margin-left: 10px; /* Espaço entre operações e input */
+}
+
+/* Estilos para o tempo */
+#tempo {
+    font-size: 2.0em; /* Tamanho da fonte do tempo */
+    margin: 10px 0; /* Margem acima e abaixo */
+    text-align: center; /* Centraliza o texto do tempo */
+}
+
+/* Estilos para os acertos e mensagens de erro */
+#resultado, #mensagem-jogo, #resultado-final, #penalizacao {
+    font-size: 1.5em; /* Aumenta o tamanho da fonte */
+    margin-top: 10px; /* Margem superior */
+    color: var(--color-neutral-1); /* Cor do texto */
+    text-align: center; /* Centraliza o texto */
+    width: 100%; /* Largura total para centralização */
+}
+
+/* Estilos para os botões */
+button {
+    background-color: var(--color-primary-5); /* Cor de fundo do botão */
+    color: var(--color-neutral-0); /* Cor do texto do botão */
+    border: none; /* Remove borda padrão */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 10px 20px; /* Espaçamento interno */
+    margin-top: 10px; /* Margem superior */
+    cursor: pointer; /* Cursor em forma de mão */
+    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+}
+
+button:hover {
+    background-color: var(--color-primary-3); /* Cor de fundo ao passar o mouse */
+}
+
+
+#resultado-container {
+    display: flex; /* Usa flexbox para centralização */
+    flex-direction: column; /* Alinha os itens em coluna */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    justify-content: center; /* Centraliza os itens verticalmente */
+    text-align: center; /* Centraliza o texto dentro dos elementos */
+    margin: 20px 0; /* Margem acima e abaixo do container */
+}
+
+#resultado-container p,
+#resultado-container h1,
+#resultado-container button {
+    margin: 10px 0; /* Margem entre os elementos */
+}

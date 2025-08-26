@@ -1,0 +1,95 @@
+/*
+  CSS ATUALIZADO PARA O HEADER
+  - O header agora começa transparente.
+  - A classe '.scrolled' é adicionada via JS para torná-lo sólido.
+  - Posição alterada para 'fixed' para um melhor efeito visual.
+*/
+
+header {
+    width: 100%;
+    padding: 28px 8%;
+    position: fixed; /* ALTERADO: de 'sticky' para 'fixed' */
+    top: 0;
+    left: 0; /* ADICIONADO: Garante alinhamento com position:fixed */
+    z-index: 1000; /* Aumentado para garantir que fique sobre todo o conteúdo */
+    background-color: transparent; /* ALTERADO: Começa transparente */
+    transition: background-color 0.4s ease, padding 0.4s ease; /* ADICIONADO: Transição suave */
+}
+
+/* NOVA CLASSE: Define a aparência do header QUANDO o usuário rolar a página */
+header.scrolled {
+    background-color: var(--color-primary-1); /* Cor sólida que você usava antes */
+    padding: 18px 8%; /* Opcional: Efeito que diminui a altura do header ao rolar */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#nav_logo {
+    font-size: 24px;
+    color: var(--color-primary-6);
+}
+
+#nav_list {
+    display: flex;
+    list-style: none;
+    gap: 48px;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: #1d1d1dad;
+    font-weight: 600;
+}
+
+.nav-item.active a {
+    color: var(--color-neutral-1);
+    border-bottom: 3px solid var(--color-primary-4);
+}
+
+#mobile_btn {
+    display: none;
+}
+
+#mobile_menu {
+    display: none;
+}
+
+@media screen and (max-width: 1170px) {
+    #nav_list,
+    #navbar .btn-default {
+        display: none;
+    }
+
+    #mobile_btn {
+        display: block;
+        border: none;
+        background-color: transparent;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    #mobile_menu.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* Estilos adicionais para o menu mobile, se necessário */
+    }
+
+    #mobile_nav_list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin: 12px 0px;
+    }
+
+    #mobile_nav_list .nav-item {
+        list-style: none;
+        text-align: center;
+    } 
+}
