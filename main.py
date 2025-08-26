@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+import os
 
 app = Flask(__name__)
 
@@ -39,6 +40,5 @@ def subtracao():
 
 
 if __name__ == '__main__':
-    app.run(
-        debug=True
-    )  # Ativa o modo de debug para ajudar a detectar erros mais facilmente
+    port = int(os.environ.get('PORT', 3000))  # 3000 é comum no Replit
+    app.run(host='0.0.0.0', port=port)
