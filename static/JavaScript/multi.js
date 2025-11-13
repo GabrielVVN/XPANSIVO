@@ -157,6 +157,11 @@ function finalizarJogo() {
     // Esconde a operação atual
     document.getElementById('operacao').innerHTML = '';
     document.getElementById('tempo').innerHTML = 'Tempo: 0s'; // Atualiza o tempo na tela
+    
+    // Salvar resultado no banco de dados
+    if (typeof salvarResultadoPartida === 'function') {
+        salvarResultadoPartida(acertos, errosTotais);
+    }
 }
 
 // Função para reiniciar o jogo

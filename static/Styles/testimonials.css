@@ -91,5 +91,74 @@
     .feedback {
         flex-direction: column;
     }
+    
+    .btn-ranking {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
 } 
+
+/* Estilos do Ranking */
+.btn-ranking {
+    padding: 10px 20px;
+    border: 2px solid #FF6B6B;
+    background: white;
+    color: #FF6B6B;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.btn-ranking:hover {
+    background: #ffebee;
+}
+
+.btn-ranking.active {
+    background: #FF6B6B;
+    color: white;
+}
+
+#rankingContainer {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#rankingContent {
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#rankingContent table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#rankingContent thead {
+    background: #FF6B6B;
+    color: white;
+}
+
+#rankingContent th {
+    padding: 10px;
+    text-align: left;
+    font-weight: bold;
+}
+
+#rankingContent td {
+    padding: 12px;
+}
+
+#rankingContent tbody tr:nth-child(odd) {
+    background: #fff;
+}
+
+#rankingContent tbody tr:nth-child(even) {
+    background: #fafafa;
+}
+
+#rankingContent tbody tr:hover {
+    background: #f0f0f0;
+}
 
