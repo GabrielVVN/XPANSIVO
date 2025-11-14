@@ -12,6 +12,20 @@ footer {
 #copyright {
     color: var(--color-neutral-1);;
     font-weight: 500;
+    display: flex;              /* Ativa o Flexbox */
+    justify-content: space-between; /* Coloca um item no início e o outro no fim */
+    align-items: center;        /* Alinha eles verticalmente no centro */
+    width: 100%;                /* Faz ocupar a largura total do rodapé */
+}
+
+/* Apenas para garantir que os links também fiquem alinhados */
+.social-media-buttons {
+  display: inline-flex; /* Alinha os ícones dentro dos botões */
+  gap: 10px;            /* Adiciona um espaço entre os ícones */
+}
+
+.link-lab{
+    color: rgb(236, 236, 236)
 }
 
 @media screen and (max-width: 600px) {
